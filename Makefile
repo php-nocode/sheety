@@ -1,3 +1,7 @@
+#!make
 
-test-pop:
+stop:
+	@docker stop $$(docker ps | grep ":8080" | cut -c1-12) || true
+
+test-pop: stop
 	@docker run --rm -it -v $$PWD:/app -p 8080:80 javanile/webrequest webrequest-pop.php

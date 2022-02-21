@@ -1,7 +1,8 @@
 <?php
 
-echo "Ciao";
+var_dump($_POST);
 
+echo "Ciao";
 
 
 
